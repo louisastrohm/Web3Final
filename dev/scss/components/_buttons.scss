@@ -1,3 +1,13 @@
 /* =============
     Buttons
 ============= */
+
+@mixin btn($lightgreen){
+    background-color: $lightgreen;
+    padding: 8px 24px;
+    color:black;
+    transition: .3s;
+    text-decoration: none;
+    margin: 100px;
+
+}

@@ -1,3 +1,39 @@
 /* =============
     Typography
 ============= */
+
+@mixin headline{
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    padding: 10px 0px 20px;
+    color:black;
+}
+
+@mixin subhead{
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    padding: 10px 0px 20px;
+    color:black;
+}
+
+@mixin bodycopy{
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    padding: 10px 0px 20px;
+    color:black;
+}
+
+
+
+h1{
+    @include headline();
+}
+
+h2{
+    @include subhead();
+}
+
+h3{
+    @include bodycopy();
+}
+

@@ -1,11 +1,6 @@
 /* =============
     Mixins
 ============= */
-/* ---------------- Font Sizing ---------------- */
-html {
-  font-size: 100%;
-}
-
 /* ---------------- Media Queries ---------------- */
 /* =============
     Variables
@@ -330,6 +325,27 @@ template {
 /* =============
     Typography
 ============= */
+h1 {
+  font-family: "Poppins", serif;
+  font-weight: 700;
+  padding: 10px 0px 20px;
+  color: black;
+}
+
+h2 {
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  padding: 10px 0px 20px;
+  color: black;
+}
+
+h3 {
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  padding: 10px 0px 20px;
+  color: black;
+}
+
 /* =============
     Buttons
 ============= */
