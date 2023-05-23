@@ -8,6 +8,31 @@
     color:black;
     transition: .3s;
     text-decoration: none;
-    margin: 100px;
+    border-radius: 20px;
 
+        &:hover{
+            background-color: $blueGreen;
+            transition: .3s;
+            color:black;
+        }
+    }
+
+    a.btn{
+    @include btn($lightgreen);
+    font-family: "Poppins", sans-serif;
+}
+
+
+@mixin swatch($cream){
+    background-color: $cream;
+    transition: .3s;
+    width: 123px;
+    height: 112px;
+
+    &:hover{
+        transition: 3s;
+        border: 1px;
+        border-color: black;
+    }
+   
 }

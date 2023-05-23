@@ -341,7 +341,7 @@ h2 {
 
 h3 {
   font-family: "Poppins", serif;
-  font-weight: 500;
+  font-weight: 400;
   padding: 10px 0px 20px;
   color: black;
 }
@@ -349,6 +349,21 @@ h3 {
 /* =============
     Buttons
 ============= */
+a.btn {
+  background-color: #D2D681;
+  padding: 8px 24px;
+  color: black;
+  transition: 0.3s;
+  text-decoration: none;
+  border-radius: 20px;
+  font-family: "Poppins", sans-serif;
+}
+a.btn:hover {
+  background-color: #689976;
+  transition: 0.3s;
+  color: black;
+}
+
 /* =============
     Forms
 ============= */
@@ -376,3 +391,20 @@ textarea {
 /* =============
     Footer
 ============= */
+#hero .heroText {
+  background-color: #ECEEEB;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+#hero .heroText h1 {
+  margin: 43px;
+}
+#hero .heroText h3 {
+  margin-left: 43px;
+  margin-right: 43px;
+  margin-top: 8px;
+}
+#hero .heroText img {
+  display: inline;
+  width: 100%;
+}
