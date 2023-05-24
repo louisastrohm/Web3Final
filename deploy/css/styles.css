@@ -322,6 +322,25 @@ template {
 /* =============
     Base
 ============= */
+ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 64px;
+  margin: 80px;
+  text-align: center;
+}
+ul img {
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  ul {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 /* =============
     Typography
 ============= */
@@ -342,6 +361,13 @@ h2 {
 h3 {
   font-family: "Poppins", serif;
   font-weight: 400;
+  padding: 10px 0px 20px;
+  color: black;
+}
+
+p {
+  font-family: "Poppins", serif;
+  font-weight: 300;
   padding: 10px 0px 20px;
   color: black;
 }
@@ -395,6 +421,7 @@ textarea {
   background-color: #ECEEEB;
   display: grid;
   grid-template-columns: 1fr;
+  text-align: center;
 }
 #hero .heroText h1 {
   margin: 43px;
@@ -407,4 +434,65 @@ textarea {
 #hero .heroText img {
   display: inline;
   width: 100%;
+}
+
+#features h2 {
+  padding-left: 16px;
+}
+#features li {
+  background-color: #B1C9CF;
+  border-radius: 35px;
+}
+#features li p {
+  padding: 8px;
+}
+
+#accessories h2 {
+  padding-left: 16px;
+}
+#accessories .accessory1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+  padding: 80px;
+}
+#accessories .accessory1 p {
+  padding-left: 64px;
+  padding-right: 64px;
+}
+#accessories .accessory2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+  padding: 80px;
+}
+#accessories .accessory2 p {
+  padding-left: 64px;
+  padding-right: 64px;
+}
+@media (min-width: 1024px) {
+  #accessories .accessory1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #accessories .accessory1 p {
+    padding-left: 96px;
+    padding-right: 96px;
+  }
+  #accessories .accessory2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #accessories .accessory2 p {
+    padding-left: 96px;
+    padding-right: 96px;
+  }
+}
+
+#relatedProduct h2 {
+  padding-left: 16px;
 }

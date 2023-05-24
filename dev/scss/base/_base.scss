@@ -2,4 +2,23 @@
     Base
 ============= */
 
+ul{
+    list-style: none;
+    padding:0px;
+    margin:0px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap:64px;
+    margin: 80px;
+    text-align: center;
+
+    img{
+        width:100%;
+    }
+
+        @include lg{
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+}
 

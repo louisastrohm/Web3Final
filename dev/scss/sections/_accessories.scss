@@ -1,0 +1,57 @@
+#accessories{
+
+    h2{
+        padding-left: 16px;
+    }
+
+    .accessory1{
+        display:grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 80px;
+
+        p{
+            padding-left: 64px;
+            padding-right: 64px;
+        }
+
+    }
+
+    .accessory2{
+        display:grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 80px;
+
+        p{
+            padding-left: 64px;
+            padding-right: 64px;
+        }
+    }
+
+    @include lg{
+        .accessory1{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            p{
+                padding-left: 96px;
+                padding-right: 96px;
+            }
+        }
+
+        .accessory2{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            p{
+                padding-left: 96px;
+                padding-right: 96px;
+            }
+        }
+    }
+}

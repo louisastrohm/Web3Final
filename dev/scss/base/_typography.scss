@@ -23,6 +23,13 @@
     color:black;
 }
 
+@mixin ptag{
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    padding: 10px 0px 20px;
+    color:black;
+}
+
 
 
 h1{
@@ -35,5 +42,9 @@ h2{
 
 h3{
     @include bodycopy();
+}
+
+p{
+    @include ptag();
 }
 
