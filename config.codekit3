@@ -232,6 +232,30 @@
       "sC" : 3,
       "tS" : 0
     },
+    "\/dev\/content\/checkout\/_checkoutfields.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/dev\/content\/checkout\/_checkoutfields.html",
+      "oF" : 0
+    },
+    "\/dev\/content\/checkout\/_colors.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/dev\/content\/checkout\/_colors.html",
+      "oF" : 0
+    },
+    "\/dev\/content\/checkout\/_heading.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/dev\/content\/checkout\/_heading.html",
+      "oF" : 0
+    },
     "\/dev\/content\/product-page\/_accessories.kit" : {
       "cB" : 0,
       "ft" : 2048,

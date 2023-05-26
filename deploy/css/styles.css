@@ -411,6 +411,83 @@ textarea {
 /* =============
     Navigation
 ============= */
+header {
+  display: flex;
+  background-color: #B1C9CF;
+  align-items: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header #logo-container img {
+  padding-right: 150px;
+}
+header #burger-btn {
+  display: block;
+}
+header #burger-btn span,
+header #burger-btn span::before,
+header #burger-btn span::after {
+  height: 5px;
+  width: 40px;
+  background-color: black;
+}
+header #burger-btn span {
+  display: block;
+  position: relative;
+}
+header #burger-btn span::before {
+  position: absolute;
+  content: " ";
+  top: -16px;
+}
+header #burger-btn span::after {
+  position: absolute;
+  content: " ";
+  top: 16px;
+}
+header #burger-container {
+  display: block;
+  position: relative;
+  z-index: 3;
+}
+@media (min-width: 1024px) {
+  header #burger-container {
+    display: none;
+  }
+}
+header #main-menu {
+  display: none;
+}
+header #main-menu ul {
+  display: flex;
+  padding-right: 400px;
+}
+@media (min-width: 1024px) {
+  header #main-menu {
+    display: inline;
+  }
+}
+header #main-menu.show-menu {
+  display: inline;
+  transition: 0.3s;
+}
+header #main-menu input {
+  position: relative;
+}
+header #main-menu input input {
+  border: none;
+  height: 30px;
+  border-radius: 30px;
+}
+header #main-menu input img {
+  width: 20px;
+  position: absolute;
+}
+
 /* =============
     Header
 ============= */
@@ -424,16 +501,22 @@ textarea {
   text-align: center;
 }
 #hero .heroText h1 {
-  margin: 43px;
+  margin-top: 32px;
+  margin-left: 105px;
+  margin-right: 105px;
 }
 #hero .heroText h3 {
-  margin-left: 43px;
-  margin-right: 43px;
+  margin-left: 95px;
+  margin-right: 95px;
   margin-top: 8px;
 }
 #hero .heroText img {
   display: inline;
   width: 100%;
+}
+#hero a {
+  margin-top: 150px;
+  margin-left: 130px;
 }
 
 #features h2 {
@@ -495,4 +578,12 @@ textarea {
 
 #relatedProduct h2 {
   padding-left: 16px;
+}
+#relatedProduct li img {
+  width: 55%;
+}
+@media (min-width: 1024px) {
+  #relatedProduct li img {
+    width: 80%;
+  }
 }

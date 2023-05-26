@@ -1,3 +1,103 @@
 /* =============
     Navigation
 ============= */
+
+header{
+    display: flex;
+    background-color: $lightblue;
+    align-items: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 16px;
+
+    #logo-container{
+
+        img{
+            padding-right: 150px;
+        }
+    }
+
+
+    #burger-btn {
+
+            display:block;
+            span,
+            span::before,
+            span::after {
+                height: 5px;
+                width: 40px;
+                background-color: black;
+            }
+    
+            span {
+                display: block;
+                position: relative;
+    
+                &::before {
+                    position: absolute;
+                    content: " ";
+                    top: -16px;
+                }
+    
+                &::after {
+                    position: absolute;
+                    content: " ";
+                    top: 16px;
+                }
+            }
+        }
+
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                
+        
+                #burger-container {
+                    display:block;
+                    position: relative;
+                    z-index: 3;
+                    @include lg {
+                        display: none;
+                    }
+                }
+        
+                #main-menu {
+                    ul {
+                        display: flex;
+                        padding-right: 400px;
+                       
+                    }
+        
+                    display: none;
+        
+                    @include lg {
+                        display: inline;
+                    }
+
+
+                    &.show-menu{
+                        display:inline;
+                        transition:.3s;
+                    }
+            
+                    input{
+                        position: relative;
+            
+                        input{
+                            border: none;
+                            height: 30px;
+                            border-radius: 30px;
+                        }
+            
+            
+                        img{
+                            width:20px;
+                            position: absolute;
+                        }
+                    }
+               
+               
+                }
+     
+        
+}
