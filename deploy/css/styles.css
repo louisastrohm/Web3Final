@@ -415,9 +415,9 @@ header {
   display: flex;
   background-color: #B1C9CF;
   align-items: center;
-  padding-top: 16px;
   padding-bottom: 16px;
   padding-left: 16px;
+  padding-top: 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -426,11 +426,12 @@ header #logo-container img {
   padding-right: 150px;
 }
 header #burger-btn {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
 }
-header #burger-btn span,
-header #burger-btn span::before,
-header #burger-btn span::after {
+header #burger-btn div {
   height: 5px;
   width: 40px;
   background-color: black;
@@ -459,31 +460,37 @@ header #burger-container {
     display: none;
   }
 }
-header #main-menu {
-  display: none;
+@media only screen and (max-width: 1024px) {
+  header #main-menu {
+    background-color: green;
+    transition: 0.3s;
+    height: 100vw;
+    width: 80%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+  }
+  header #main-menu.show-menu {
+    left: 0;
+    transition: 0.3s;
+  }
 }
 header #main-menu ul {
   display: flex;
   padding-right: 400px;
+  justify-content: space-between;
 }
 @media (min-width: 1024px) {
   header #main-menu {
-    display: inline;
+    display: flex;
   }
 }
-header #main-menu.show-menu {
-  display: inline;
-  transition: 0.3s;
-}
 header #main-menu input {
-  position: relative;
-}
-header #main-menu input input {
   border: none;
   height: 30px;
   border-radius: 30px;
 }
-header #main-menu input img {
+header #main-menu img {
   width: 20px;
   position: absolute;
 }
@@ -494,29 +501,50 @@ header #main-menu input img {
 /* =============
     Footer
 ============= */
-#hero .heroText {
+#hero {
   background-color: #ECEEEB;
+}
+#hero .heroText {
   display: grid;
   grid-template-columns: 1fr;
   text-align: center;
 }
 #hero .heroText h1 {
   margin-top: 32px;
-  margin-left: 105px;
-  margin-right: 105px;
+  margin-left: 95px;
+  margin-right: 95px;
 }
 #hero .heroText h3 {
   margin-left: 95px;
   margin-right: 95px;
   margin-top: 8px;
 }
-#hero .heroText img {
-  display: inline;
+#hero img {
+  margin-top: 24px;
   width: 100%;
 }
-#hero a {
+#hero a.hero-btn {
   margin-top: 150px;
-  margin-left: 130px;
+  margin-left: 18px;
+}
+@media (min-width: 1024px) {
+  #hero {
+    display: flex;
+  }
+  #hero h1 {
+    text-align: left;
+    margin-bottom: 10;
+  }
+  #hero h3 {
+    text-align: left;
+  }
+  #hero a {
+    margin-right: 150px;
+    margin-bottom: 100px;
+  }
+  #hero img {
+    margin-top: 0;
+  }
 }
 
 #features h2 {
@@ -534,8 +562,8 @@ header #main-menu input img {
   padding-left: 16px;
 }
 #accessories .accessory1 {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   text-align: center;
   padding: 80px;
 }
@@ -544,14 +572,17 @@ header #main-menu input img {
   padding-right: 64px;
 }
 #accessories .accessory2 {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column-reverse;
   text-align: center;
   padding: 80px;
 }
 #accessories .accessory2 p {
   padding-left: 64px;
   padding-right: 64px;
+}
+#accessories .accessory2 .view-more img {
+  width: 40px;
 }
 @media (min-width: 1024px) {
   #accessories .accessory1 {

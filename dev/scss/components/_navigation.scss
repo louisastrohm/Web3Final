@@ -2,17 +2,19 @@
     Navigation
 ============= */
 
-header{
+header {
     display: flex;
     background-color: $lightblue;
     align-items: center;
-    padding-top: 16px;
     padding-bottom: 16px;
     padding-left: 16px;
+    padding-top: 16px;
 
-    #logo-container{
 
-        img{
+
+    #logo-container {
+
+        img {
             padding-right: 150px;
         }
     }
@@ -20,84 +22,99 @@ header{
 
     #burger-btn {
 
-            display:block;
-            span,
-            span::before,
-            span::after {
-                height: 5px;
-                width: 40px;
-                background-color: black;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        position: relative;
+
+        div {
+            height: 5px;
+            width: 40px;
+            background-color: black;
+        }
+
+        span {
+            display: block;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: " ";
+                top: -16px;
             }
-    
-            span {
-                display: block;
-                position: relative;
-    
-                &::before {
-                    position: absolute;
-                    content: " ";
-                    top: -16px;
-                }
-    
-                &::after {
-                    position: absolute;
-                    content: " ";
-                    top: 16px;
-                }
+
+            &::after {
+                position: absolute;
+                content: " ";
+                top: 16px;
+            }
+        }
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+    #burger-container {
+        display: block;
+        position: relative;
+        z-index: 3;
+
+        @include lg {
+            display: none;
+        }
+    }
+
+    #main-menu {
+
+        @media only screen and (max-width: 1024px) {
+            background-color: green;
+            transition: .3s;
+            height: 100vw;
+            width: 80%;
+            position: absolute;
+            top: 0;
+            left: -100%;
+
+            &.show-menu {
+                left: 0;
+                transition: .3s;
             }
         }
 
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                
-        
-                #burger-container {
-                    display:block;
-                    position: relative;
-                    z-index: 3;
-                    @include lg {
-                        display: none;
-                    }
-                }
-        
-                #main-menu {
-                    ul {
-                        display: flex;
-                        padding-right: 400px;
-                       
-                    }
-        
-                    display: none;
-        
-                    @include lg {
-                        display: inline;
-                    }
+
+        ul {
+            display: flex;
+            padding-right: 400px;
+            justify-content: space-between;
+
+        }
 
 
-                    &.show-menu{
-                        display:inline;
-                        transition:.3s;
-                    }
-            
-                    input{
-                        position: relative;
-            
-                        input{
-                            border: none;
-                            height: 30px;
-                            border-radius: 30px;
-                        }
-            
-            
-                        img{
-                            width:20px;
-                            position: absolute;
-                        }
-                    }
-               
-               
-                }
-     
-        
+        @include lg {
+            display: flex;
+
+        }
+
+
+
+
+        input {
+            border: none;
+            height: 30px;
+            border-radius: 30px;
+        }
+
+
+        img {
+            width: 20px;
+            position: absolute;
+        }
+
+
+
+    }
+
+
 }

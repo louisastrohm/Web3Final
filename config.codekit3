@@ -47,6 +47,16 @@
       "q" : 90,
       "rq" : 75
     },
+    "\/deploy\/img\/arrow.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/deploy\/img\/arrow.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/deploy\/img\/coffeepot.png" : {
       "ft" : 32768,
       "iS" : 60537,

@@ -5,8 +5,8 @@
     }
 
     .accessory1{
-        display:grid;
-        grid-template-columns: 1fr;
+        display:flex;
+        flex-direction: column;
         text-align: center;
         padding: 80px;
 
@@ -18,17 +18,26 @@
     }
 
     .accessory2{
-        display:grid;
-        grid-template-columns: 1fr;
+        display:flex;
+        flex-direction: column-reverse;
         text-align: center;
         padding: 80px;
+        
 
         p{
             padding-left: 64px;
             padding-right: 64px;
         }
+
+    .view-more{
+
+        img{
+            width: 40px;
+        }
+    }
     }
 
+   
     @include lg{
         .accessory1{
             display: flex;
