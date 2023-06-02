@@ -322,6 +322,10 @@ template {
 /* =============
     Base
 ============= */
+* {
+  scroll-behavior: smooth;
+}
+
 ul {
   list-style: none;
   padding: 0px;
@@ -462,7 +466,7 @@ header #burger-container {
 }
 @media only screen and (max-width: 1024px) {
   header #main-menu {
-    background-color: green;
+    background-color: white;
     transition: 0.3s;
     height: 100vw;
     width: 80%;
@@ -480,19 +484,34 @@ header #main-menu ul {
   padding-right: 400px;
   justify-content: space-between;
 }
+header #main-menu .searchbar {
+  display: none;
+}
 @media (min-width: 1024px) {
   header #main-menu {
     display: flex;
+    display: inline-flex;
+    margin-left: auto;
   }
-}
-header #main-menu input {
-  border: none;
-  height: 30px;
-  border-radius: 30px;
-}
-header #main-menu img {
-  width: 20px;
-  position: absolute;
+  header #main-menu .searchbar {
+    display: inline;
+    position: relative;
+  }
+  header #main-menu .searchbar input {
+    border: none;
+    height: 30px;
+    width: 230px;
+    border-radius: 30px;
+    padding-left: 30px;
+    font-family: "Poppins", serif;
+    font-weight: 300;
+  }
+  header #main-menu .searchbar img {
+    width: 20px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+  }
 }
 
 /* =============
@@ -581,6 +600,9 @@ header #main-menu img {
   padding-left: 64px;
   padding-right: 64px;
 }
+#accessories .accessory2 .view-more {
+  margin-left: 16px;
+}
 #accessories .accessory2 .view-more img {
   width: 40px;
 }
@@ -616,5 +638,23 @@ header #main-menu img {
 @media (min-width: 1024px) {
   #relatedProduct li img {
     width: 80%;
+  }
+}
+
+footer {
+  background-color: #B1C9CF;
+}
+@media (min-width: 1024px) {
+  footer {
+    padding-left: 116px;
+    padding-right: 116px;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    display: grid;
+    grid-gap: 100px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  footer .footer3 img {
+    padding-top: 50px;
   }
 }

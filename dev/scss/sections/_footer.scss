@@ -1,0 +1,24 @@
+footer{
+
+    background-color: $lightblue;
+
+    
+
+    @include lg{
+       padding-left: 116px;
+        padding-right: 116px;
+        padding-top: 45px;
+        padding-bottom: 45px;
+        display: grid;
+        grid-gap:100px;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        .footer3{
+            img{
+                padding-top: 50px;
+            }
+        }
+    }
+
+
+}
