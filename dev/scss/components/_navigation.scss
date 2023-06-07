@@ -32,24 +32,25 @@ header {
             width: 40px;
             background-color: black;
         }
-
-        span {
-            display: block;
-            position: relative;
-
-            &::before {
-                position: absolute;
-                content: " ";
-                top: -16px;
-            }
-
-            &::after {
-                position: absolute;
-                content: " ";
-                top: 16px;
-            }
-        }
     }
+
+    #burger-btn.open{
+        div{
+          transition:.3s;
+         
+          &:first-child{
+            transform: rotate(45deg);
+            transform-origin: bottom left;
+          }
+          &:nth-child(2){
+            opacity:0;
+          }
+          &:last-child{
+            transform-origin: top left;
+            transform:rotate(-45deg);
+          }
+        }
+      }
 
     display: flex;
     align-items: center;
