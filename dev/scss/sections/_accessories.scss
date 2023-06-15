@@ -28,15 +28,23 @@
             padding-left: 64px;
             padding-right: 64px;
         }
+    }
 
     .view-more{
-       margin-left: 16px;
-
-        img{
-            width: 40px;
-        }
-    }
-    }
+        display: flex;
+        margin-left: 16px;
+       
+       a{
+        text-decoration: none;
+       } 
+        
+        
+ 
+         img{
+             margin-left: 8px;
+             margin-top: -8px;
+         }
+     }
 
    
     @include lg{

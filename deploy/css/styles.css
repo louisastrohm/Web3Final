@@ -445,13 +445,13 @@ header #burger-btn.open div {
 }
 header #burger-btn.open div:first-child {
   transform: rotate(45deg);
-  transform-origin: bottom left;
+  transform-origin: left bottom;
 }
 header #burger-btn.open div:nth-child(2) {
   opacity: 0;
 }
 header #burger-btn.open div:last-child {
-  transform-origin: top left;
+  transform-origin: left top;
   transform: rotate(-45deg);
 }
 header #burger-container {
@@ -481,8 +481,16 @@ header #burger-container {
 }
 header #main-menu ul {
   display: flex;
+  flex-direction: column;
+  text-align: center;
   padding-right: 400px;
   justify-content: space-between;
+}
+header #main-menu ul li {
+  border: none;
+}
+header #main-menu ul li a {
+  text-decoration: none;
 }
 header #main-menu .searchbar {
   display: none;
@@ -492,6 +500,10 @@ header #main-menu .searchbar {
     display: flex;
     display: inline-flex;
     margin-left: auto;
+  }
+  header #main-menu ul {
+    display: flex;
+    flex-direction: row;
   }
   header #main-menu .searchbar {
     display: inline;
@@ -600,11 +612,16 @@ header #main-menu .searchbar {
   padding-left: 64px;
   padding-right: 64px;
 }
-#accessories .accessory2 .view-more {
+#accessories .view-more {
+  display: flex;
   margin-left: 16px;
 }
-#accessories .accessory2 .view-more img {
-  width: 40px;
+#accessories .view-more a {
+  text-decoration: none;
+}
+#accessories .view-more img {
+  margin-left: 8px;
+  margin-top: -8px;
 }
 @media (min-width: 1024px) {
   #accessories .accessory1 {
@@ -634,6 +651,17 @@ header #main-menu .searchbar {
 }
 #relatedProduct li img {
   width: 55%;
+}
+#relatedProduct .view {
+  display: flex;
+  margin-left: 16px;
+}
+#relatedProduct .view img {
+  margin-left: 8px;
+  margin-top: -8px;
+}
+#relatedProduct .view a {
+  text-decoration: none;
 }
 @media (min-width: 1024px) {
   #relatedProduct li img {
@@ -691,6 +719,7 @@ footer #top-button {
 
 #hero-space {
   padding-left: 16px;
+  position: relative;
 }
 #hero-space #colors {
   width: 160px;
@@ -700,6 +729,12 @@ footer #top-button {
 #hero-space #colors .color1 {
   padding-bottom: 16px;
   padding-right: 16px;
+}
+#hero-space #toast {
+  display: 100%;
+  position: absolute;
+  left: 250px;
+  top: 50px;
 }
 
 #checkout form {
@@ -723,7 +758,14 @@ footer #top-button {
   font-family: "Poppins", serif;
   font-weight: 300;
 }
+#checkout form .button {
+  margin-top: 16px;
+}
 
 #thankyou {
   text-align: center;
+}
+#thankyou .thankyou-btn {
+  margin-top: 24px;
+  margin-bottom: 160px;
 }

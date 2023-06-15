@@ -1,6 +1,7 @@
 #hero-space{
 
     padding-left: 16px;
+    position: relative;
 
    #colors{
 
@@ -13,8 +14,15 @@
         padding-bottom: 16px;
         padding-right: 16px;
     }
+  }
 
-   
+  #toast{
+    display: 100%;
+
+    position:absolute;
+    left: 250px;
+    top: 50px;
+
 
   }
    

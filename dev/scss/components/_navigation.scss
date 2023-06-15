@@ -40,13 +40,13 @@ header {
          
           &:first-child{
             transform: rotate(45deg);
-            transform-origin: bottom left;
+            transform-origin: left bottom;
           }
           &:nth-child(2){
             opacity:0;
           }
           &:last-child{
-            transform-origin: top left;
+            transform-origin: left top;
             transform:rotate(-45deg);
           }
         }
@@ -87,8 +87,19 @@ header {
 
         ul {
             display: flex;
+            flex-direction: column;
+            text-align: center;
             padding-right: 400px;
             justify-content: space-between;
+
+            li{
+                border: none;
+
+                a{
+                    text-decoration: none;
+                   } 
+            }
+
 
         }
 
@@ -101,6 +112,11 @@ header {
                 display:flex;
                 display:inline-flex;
                 margin-left: auto;
+
+                ul{
+                    display: flex;
+                    flex-direction: row;
+                }
            
 
            .searchbar{ 
